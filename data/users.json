@@ -1,0 +1,9 @@
+[
+    {
+        "name": "lex",
+        "email": "admin@gmail.com",
+        "password": "$2y$10$bxRTiGsLf8C55EPB715NEugsRLUDFTxWHX45nJg2zV5koCL3neNc6",
+        "is_admin": false,
+        "purchases": []
+    }
+]

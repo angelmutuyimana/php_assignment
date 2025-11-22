@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "price": 29.99,
+    "category": "Programming",
+    "image": "assets/images/clean_code.jpg",
+    "featured": true,
+    "description": "A handbook of agile software craftsmanship focusing on writing clean, maintainable code."
+  },
+  {
+    "id": 2,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "price": 27.50,
+    "category": "Programming",
+    "image": "assets/images/pragmatic_programmer.jpg",
+    "featured": true,
+    "description": "Essential tips, philosophies, and practices for pragmatic software development."
+  },
+  {
+    "id": 3,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "price": 19.95,
+    "category": "Self-Help",
+    "image": "assets/images/atomic_habits.jpg",
+    "featured": false,
+    "description": "An easy & proven way to build good habits and break bad ones."
+  },
+  {
+    "id": 4,
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 14.00,
+    "category": "Fiction",
+    "image": "assets/images/1984.jpg",
+    "featured": false,
+    "description": "Dystopian social science fiction novel and cautionary tale about totalitarianism."
+  }
+]

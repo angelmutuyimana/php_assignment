@@ -1,0 +1,228 @@
+/* style.css - Basic styling for Bookstore demo
+   Beginner friendly: simple selectors, clear grouping.
+*/
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #222;
+  --primary: #2d6cdf;
+  --primary-hover: #1d56b5;
+  --accent: #ffb347;
+  --border: #e1e4e8;
+  --radius: 8px;
+  --shadow: 0 2px 5px rgba(0,0,0,0.08);
+  --fb-blue: #1877F2;
+  --fb-blue-hover: #0f5cc4;
+  --fb-bg: #f0f2f5;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fb-bg);
+  color: var(--text);
+  line-height: 1.4;
+}
+img { max-width: 100%; display: block; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 0.75rem 1.25rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar .brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
+}
+.navbar .nav-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+.navbar .nav-links a:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 1.5rem auto 3rem;
+}
+.hero { text-align: center; padding: 2rem 1rem; }
+.hero h1 { margin: 0.3rem 0; font-size: 2rem; }
+
+h2, h3, h4 { margin: 0.5rem 0 0.75rem; }
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+.card.small { padding: 0.75rem; }
+.card:hover { box-shadow: 0 4px 10px rgba(0,0,0,0.12); }
+.card-img { height: 160px; overflow: hidden; border-radius: var(--radius); margin-bottom: 0.75rem; }
+.card-img img { object-fit: cover; width: 100%; height: 100%; }
+.card-body h3 { margin: 0 0 0.4rem; font-size: 1.1rem; }
+.author { font-size: 0.85rem; color: #555; }
+.price { font-weight: bold; margin: 0.4rem 0; }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.chip {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.45rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+}
+
+.btn, .btn-outline {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+  border: none;
+}
+.btn { background: var(--primary); color: #fff; }
+.btn:hover { background: var(--primary-hover); }
+.btn-outline { background: #fff; color: var(--primary); border: 1px solid var(--primary); }
+.btn-outline:hover { background: var(--primary); color: #fff; }
+
+.alert {
+  background: #ffe8c2;
+  color: #663c00;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius);
+  margin-bottom: 0.9rem;
+  font-size: 0.85rem;
+}
+.info { font-size: 0.85rem; color: #444; }
+
+.form-card label { display: block; margin-bottom: 0.7rem; font-size: 0.85rem; }
+.form-card input, .form-card textarea {
+  width: 100%;
+  padding: 0.5rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+}
+.form-card input::placeholder, .form-card textarea::placeholder {
+  color: var(--accent);
+  opacity: 0.9;
+}
+.form-card input:focus, .form-card textarea:focus { outline: 2px solid var(--primary); }
+.switch-link { font-size: 0.75rem; margin-top: 0.7rem; }
+.auth { max-width: 420px; }
+.auth-wrapper {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+.fb-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 380px;
+  padding: 1.75rem 1.5rem 1.4rem;
+}
+.fb-card h2 { margin-top:0; font-size:1.6rem; font-weight:600; color:#1c1e21; }
+.fb-card .sub { font-size:0.8rem; color:#606770; margin-top:-0.4rem; margin-bottom:1rem; }
+.fb-input-group { margin-bottom:0.9rem; }
+.fb-input-group label { display:block; font-size:0.7rem; font-weight:600; letter-spacing:.5px; text-transform:uppercase; color:#65676b; margin-bottom:0.35rem; }
+.fb-input-group input { width:100%; padding:0.85rem 0.9rem; border:1px solid #ccd0d5; border-radius:6px; font-size:0.9rem; background:#fff; transition:border-color .15s, box-shadow .15s; }
+.fb-input-group input:focus { outline:none; border-color: var(--fb-blue); box-shadow:0 0 0 2px rgba(24,119,242,.2); }
+.fb-input-group input::placeholder { color:#8a8d91; }
+.fb-btn-primary { width:100%; background: var(--fb-blue); border:none; color:#fff; font-size:1rem; font-weight:600; padding:0.9rem 0; border-radius:6px; cursor:pointer; transition:background .15s; }
+.fb-btn-primary:hover { background: var(--fb-blue-hover); }
+.fb-link-row { text-align:center; margin-top:0.9rem; font-size:0.8rem; }
+.fb-link-row a { color: var(--fb-blue); text-decoration:none; }
+.fb-link-row a:hover { text-decoration:underline; }
+.fb-role-group { display:flex; gap:1rem; margin:0.6rem 0 0.2rem; flex-wrap:wrap; }
+.fb-role-group label { display:flex; align-items:center; gap:0.35rem; font-size:0.75rem; background:#eef3ff; padding:0.4rem 0.6rem; border-radius:20px; cursor:pointer; }
+.fb-role-group input { accent-color: var(--fb-blue); }
+.fb-divider { height:1px; background:#dadde1; margin:1.2rem 0; }
+.fb-small-note { font-size:0.65rem; color:#606770; margin-top:0.4rem; }
+.fb-logo { font-size:2.3rem; font-weight:700; color: var(--fb-blue); text-align:center; margin-bottom:0.5rem; font-family: 'Trebuchet MS', Arial, sans-serif; letter-spacing:-1px; }
+
+@media (max-width:500px){
+  .fb-card { padding:1.3rem 1rem 1.1rem; }
+  .fb-card h2 { font-size:1.4rem; }
+}
+
+.book-detail { display: flex; gap: 1.5rem; }
+.detail-img { flex: 0 0 280px; }
+.detail-img img { border-radius: var(--radius); height: 100%; object-fit: cover; }
+.detail-body { flex: 1; }
+.description { font-size: 0.9rem; line-height: 1.3; }
+
+.footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: var(--card-bg);
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+}
+
+.inline-form { display: inline-block; margin: 0.3rem 0; }
+.inline-form button { font-size: 0.7rem; padding: 0.35rem 0.6rem; }
+.admin-form { display: grid; gap: 0.6rem; margin-top: 0.5rem; }
+.admin-form label { font-size: 0.75rem; }
+.admin-form input, .admin-form textarea { font-size: 0.75rem; }
+
+/* Responsive adjustments */
+@media (max-width: 780px) {
+  .book-detail { flex-direction: column; }
+  .detail-img { flex: none; }
+  .navbar { flex-wrap: wrap; }
+  .nav-links a { margin-left: 0.5rem; }
+}
+@media (max-width: 500px) {
+  .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .hero h1 { font-size: 1.6rem; }
+}
+
+/* Add Book Form Styling (equal width & colorful placeholders) */
+.book-form { margin-top: 1rem; }
+.book-form .form-grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); }
+.book-form label { font-size:0.75rem; display:flex; flex-direction:column; }
+.book-form input, .book-form select, .book-form textarea { width:100%; padding:0.65rem 0.7rem; font-size:0.85rem; border:1px solid var(--border); border-radius:var(--radius); background:#fff; transition:box-shadow .2s, border-color .2s; }
+.book-form input::placeholder, .book-form textarea::placeholder { color:#ff7a18; letter-spacing:.3px; }
+.book-form select:focus, .book-form input:focus, .book-form textarea:focus { outline:none; border-color: var(--primary); box-shadow:0 0 0 2px rgba(45,108,223,.2); }
+.book-form input:hover, .book-form select:hover, .book-form textarea:hover { border-color: var(--primary); }
+.book-form .featured-label { align-self:end; padding-top:1.2rem; font-weight:bold; color: var(--primary); }
+.book-form .image-upload input[type=file] { padding:0.4rem; background:#f9fbff; cursor:pointer; }
+.book-form .image-upload input[type=file]:hover { background:#eef5ff; }
+.book-form button[type=submit] { margin-top:0.8rem; }
+
+@media (max-width:650px){
+  .book-form .form-grid { grid-template-columns:1fr; }
+  .book-form .featured-label { padding-top:0; }
+}
